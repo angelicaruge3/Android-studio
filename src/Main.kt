@@ -1,6 +1,4 @@
 import java.io.IO.println
-import java.io.IO.readln
-import java.text.DecimalFormat
 
 //creado por la estudiante Angelica Ruge Castellanos.
 
@@ -20,24 +18,19 @@ fun main() {
         return
     }
     // Calcular el IMC
-    val imc = calcularIMC(peso, estatura)
+    val imc = calcularimc(peso, estatura)
+
+    // Función para calcular el IMC
+    fun calcular(peso: Double, estatura: Double): Double {
+        return peso / (estatura * estatura)
+    }
 
     // Mostrar el IMC
-    println("Su Índice de Masa Corporal (IMC) es: %.2f".format(imc))
+    kotlin.io.println()
 
     // Determinar el estado nutricional según el IMC
-    val estadoNutricional = determinarEstadoNutricional(imc)
-    println("Estado nutricional: $estadoNutricional")
-}
+  
 
-
-
-
-
-// Función para calcular el IMC
-fun calcularIMC(peso: Double, estatura: Double): Double {
-    return peso / (estatura * estatura)
-}
 
 // Función para determinar el estado nutricional según el IMC
 fun determinarEstadoNutricional(imc: Double): String {
@@ -53,3 +46,26 @@ fun determinarEstadoNutricional(imc: Double): String {
         else -> "Valor IMC fuera de rango"
     }
 }
+
+val lstPersonas = mutableListOf<Persona>()
+
+val persona1 = Persona(23.5, 1.54)
+val persona2 = Persona(45.3, 1.68)
+val persona3 = Persona(73.5, 1.69)
+
+println(lstPersonas)
+
+lstPersonas.forEach{est ->
+    println(est)
+}
+}
+
+fun calcularimc(peso: Double, estatura: Double){
+
+}
+
+
+
+
+
+
